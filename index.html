@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Creating Maps with Leaflet</title>
+		<link rel="stylesheet" href=https://unpkg.com/leaflet@1.9.3/dist/leaflet.css integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/>
+		<script src=https://unpkg.com/leaflet@1.9.3/dist/leaflet.js integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+	</head>
+
+	<body>
+		<H1 ALIGN="center"><FONT COLOR=#CCFFFF SIZE=3><A HREF="#tag2"NAME="tag1">SKIP TO BOTTOM</A></H1>
+		<div id="map" style="height: 600px"></div>
+		<script>
+		var map = L.map('map').setView([13.7563, 100.5018], 10);
+		L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+
+		var greenIcon = L.icon({
+		iconUrl: 'icon.png',
+		iconSize: [30, 30],
+		iconAnchor: [45, 45],
+		popupAnchor: [0, -39]
+		});
+
+		L.marker([13.73789,100.51370],{icon:greenIcon}).addTo(map).bindPopup("<b>วัดไตรมิตรวิทยารามวรมหาวิหาร</b><br>เขตสัมพันธวงศ์, กรุงเทพมหานคร<br>");
+		L.marker([13.81785,100.42416],{icon:greenIcon}).addTo(map).bindPopup("<b>วัดหูช้าง</b><br>อำเภอบางกรวย, นนทบุรี<br>");
+		L.marker([13.54747,100.60798],{icon:greenIcon}).addTo(map).bindPopup("<b>วัดอโศการาม</b><br>อำเภอเมือง, สมุทรปราการ<br>");
+		L.marker([13.92642,100.47933],{icon:greenIcon}).addTo(map).bindPopup("<b>วัดสพานสูง</b><br>อำเภอปากเกร็ด, นนทบุรี<br>");
+		L.marker([13.81149,100.11390],{icon:greenIcon}).addTo(map).bindPopup("<b>วัดธรรมศาลา</b><br>อำเภอเมือง, นครปฐม<br>");
+		</script>
+		<br><br><br>
+		<P ALIGN="left-side"><FONT COLOR=#000000 SIZE=4>จัดทำโดย</FONT></P>
+		<br>
+		<P ALIGN="left-side"><FONT COLOR=#000000 SIZE=4>น.ส.ณภัทร อุดมเสรีเลิศ</FONT></P>
+		<P ALIGN="left-side"><FONT COLOR=#000000 SIZE=4>รหัสนิสิต 6431115221</FONT></P>
+		<br>
+		<P ALIGN="center"><FONT COLOR=#CCFFFF SIZE=3><A HREF="#tag1" NAME="tag2">SKIP TO TOP</A></P>
+	</body>
+
+</html>
